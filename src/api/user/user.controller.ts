@@ -6,5 +6,7 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Get('/:userId')
-  async findUserById() {}
+  async findUserById() {
+    return this.userService.test();
+  }
 }
