@@ -16,12 +16,7 @@ export class JsonDBService<T> {
     );
   }
 
-  async getData(key: string): Promise<T> {
-    return this.db.getData(key);
-  }
-
-  async saveData(key: string, data: T): Promise<void> {
-    await this.db.push(`/${key}`, data, true);
-    await this.db.save();
+  get jsonDB() {
+    return this.db;
   }
 }

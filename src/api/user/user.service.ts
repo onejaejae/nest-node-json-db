@@ -1,20 +1,27 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { User } from './entity/user.entity';
-import { JsonDBService } from 'src/core/database/database.service';
+import { UserRepository } from './repository/user.repository';
+import { UserRepositoryKey } from 'src/core/constant/repository.key.constant';
 
 @Injectable()
 export class UserService {
   constructor(
-    @Inject(User.name)
-    private readonly userJsonDBService: JsonDBService<User>,
+    @Inject(UserRepositoryKey) private readonly userRepository: UserRepository,
   ) {}
 
-  test() {
-    const user = new User('test@email.com', '1234');
-    this.userJsonDBService.saveData('user[]/', user);
+  async test() {
+    // const user = new User('test@email.com', '1234');
+    // this.userRepository.create(user);
 
-    this.userJsonDBService.getData('user[]/').then((data) => {
-      console.log(data);
-    });
+    // const user2 = new User('test22@email.com', '1234');
+    // this.userRepository.create(user2);
+
+    // const user3 = new User('test@email.com', '1234');
+    // this.userRepository.create(user3);
+
+    await this.userRepository.deleteAll();
+    const result = await this.userRepository.getAll();
+    await this.userRepository.reload();
+    console.log('resultresult', result);
   }
 }
