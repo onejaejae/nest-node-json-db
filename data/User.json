@@ -1,6 +1,18 @@
 {
     "users": [
         {
+            "id": "46694dc14e969357bd37e17d90a8f7b8",
+            "createdAt": "2023-08-23T14:57:25.594Z",
+            "updatedAt": "2023-08-23T14:57:25.594Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4e5a7f4dc9aded41a2833198c3b95b02",
+            "createdAt": "2023-08-23T15:02:28.705Z",
+            "updatedAt": "2023-08-23T15:02:28.705Z",
+            "deletedAt": null,
             "email": "test@email.com",
             "password": "1234"
         }

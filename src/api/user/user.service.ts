@@ -19,7 +19,12 @@ export class UserService {
     // const user3 = new User('test@email.com', '1234');
     // this.userRepository.create(user3);
 
-    await this.userRepository.deleteAll();
+    // await this.userRepository.deleteAll();
+    const res = await this.userRepository.findByIdOrThrow(
+      '4e5a7f4dc9aded41a2833198c3b95b02',
+    );
+    console.log('resres', res);
+
     const result = await this.userRepository.getAll();
     await this.userRepository.reload();
     console.log('resultresult', result);
