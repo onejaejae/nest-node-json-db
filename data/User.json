@@ -23,6 +23,22 @@
             "deletedAt": null,
             "email": "test22@email.com",
             "password": "$2b$10$50Sw6p.9.L5rLccVej9ju./9dtQwX.XOEep.Uh0ktsbj6c6nqmQRe"
+        },
+        {
+            "id": "43473fe2b0c4f894a3618fe5008c7fbc",
+            "createdAt": "2023-08-24T05:03:11.646Z",
+            "updatedAt": "2023-08-24T05:03:11.646Z",
+            "deletedAt": null,
+            "email": "test33@email.com",
+            "password": "$2b$10$x9HFhVziwGs.tCb5o81PAOwv.7WGp9z0cH2cAYCcav/esXksitqa6"
+        },
+        {
+            "id": "496624a1206ec547920a8ab7df568da9",
+            "createdAt": "2023-08-24T05:03:56.933Z",
+            "updatedAt": "2023-08-24T05:03:56.933Z",
+            "deletedAt": null,
+            "email": "test55@email.com",
+            "password": "$2b$10$kPMWcuntMMWxnPentPxSsOtsS7WSICYFgpZJ7x.o96Xkv2hJ9YRqm"
         }
     ]
 }
