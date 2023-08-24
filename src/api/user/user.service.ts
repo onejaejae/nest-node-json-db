@@ -25,14 +25,12 @@ export class UserService {
     );
     console.log('resres', res);
 
-    res.email = 'updated';
-    await this.userRepository.findByIdAndUpdate(
+    await this.userRepository.findByIdAndDelte(
       '4e5a7f4dc9aded41a2833198c3b95b02',
-      res,
     );
     const res22 = await this.userRepository.findByIdOrThrow(
       '4e5a7f4dc9aded41a2833198c3b95b02',
     );
-    console.log('resres22', res);
+    console.log('resres22', res22);
   }
 }

@@ -44,13 +44,15 @@ export abstract class BaseRepository<T> {
 
   // todo
   // delete
+  async findByIdAndDelte(id: string) {
+    const index = await this.getIndex(id);
+    if (index < 0) throw new BadRequestException(`id: ${id} don't exist`);
+
+    await this.jsonDBService.jsonDB.delete(`/${this.getPath()}[${index}]`);
+  }
 
   async create(item: T): Promise<void> {
     await this.jsonDBService.jsonDB.push(`/${this.getPath()}[]`, item, true);
-  }
-
-  async deleteAll(): Promise<void> {
-    await this.jsonDBService.jsonDB.delete(`/users`);
   }
 
   async reload(): Promise<void> {
