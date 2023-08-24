@@ -25,7 +25,7 @@ export abstract class BaseRepository<T> {
 
   async find(filter?: Partial<T>): Promise<T[]> {
     const items = await this.jsonDBService.jsonDB.getObject<T[]>(
-      `//${this.getPath()}`,
+      `/${this.getPath()}`,
     );
 
     if (filter) {
@@ -56,6 +56,21 @@ export abstract class BaseRepository<T> {
     });
 
     if (!foundItem) throw new BadRequestException('target does not exist');
+    return foundItem;
+  }
+
+  async findOne(filter: Partial<T>): Promise<T | undefined> {
+    const items = await this.find();
+
+    const foundItem = items.find((item) => {
+      for (const key in filter) {
+        if (item[key] !== filter[key]) {
+          return false;
+        }
+      }
+      return true;
+    });
+
     return foundItem;
   }
 

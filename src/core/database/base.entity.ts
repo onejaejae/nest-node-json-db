@@ -1,4 +1,4 @@
-import { uuid } from 'src/common/generate.uuid';
+import { uuid } from 'src/common/util/generate.uuid';
 
 export abstract class AbstractEntity {
   id: string;

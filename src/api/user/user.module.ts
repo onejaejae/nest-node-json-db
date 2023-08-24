@@ -13,5 +13,6 @@ export const userRepository: ClassProvider = {
   imports: [],
   providers: [UserService, userRepository],
   controllers: [UserController],
+  exports: [userRepository],
 })
 export class UserModule {}
