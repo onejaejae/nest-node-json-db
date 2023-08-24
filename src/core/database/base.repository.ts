@@ -25,7 +25,7 @@ export abstract class BaseRepository<T> {
 
   async find(filter?: Partial<T>): Promise<T[]> {
     const items = await this.jsonDBService.jsonDB.getObject<T[]>(
-      `/${this.getPath()}`,
+      `//${this.getPath()}`,
     );
 
     if (filter) {
