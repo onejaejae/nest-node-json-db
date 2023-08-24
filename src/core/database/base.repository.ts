@@ -26,11 +26,25 @@ export abstract class BaseRepository<T> {
   // todo
   // find
   async find(): Promise<T[]> {
-    return this.jsonDBService.jsonDB.getObject<T[]>('/');
+    return this.jsonDBService.jsonDB.getObject<T[]>(`/${this.getPath()}`);
   }
 
-  // todo
-  // update
+  async findOneOrThrow(filter: Partial<T>): Promise<T> {
+    const items = await this.find();
+
+    const foundItem = items.find((item) => {
+      for (const key in filter) {
+        if (item[key] !== filter[key]) {
+          return false;
+        }
+      }
+      return true;
+    });
+
+    if (!foundItem) throw new BadRequestException('"target does not exist"');
+    return foundItem;
+  }
+
   async findByIdAndUpdate(id: string, item: T) {
     const index = await this.getIndex(id);
     if (index < 0) throw new BadRequestException(`id: ${id} don't exist`);
@@ -42,8 +56,6 @@ export abstract class BaseRepository<T> {
     );
   }
 
-  // todo
-  // delete
   async findByIdAndDelte(id: string) {
     const index = await this.getIndex(id);
     if (index < 0) throw new BadRequestException(`id: ${id} don't exist`);

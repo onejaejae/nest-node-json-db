@@ -7,6 +7,14 @@
             "deletedAt": null,
             "email": "test@email.com",
             "password": "1234"
+        },
+        {
+            "id": "4811ec4e58045156986c182ee05470bc",
+            "createdAt": "2023-08-24T03:26:09.532Z",
+            "updatedAt": "2023-08-24T03:26:09.532Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
         }
     ]
 }
