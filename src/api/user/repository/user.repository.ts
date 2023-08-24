@@ -11,6 +11,6 @@ export class UserRepository extends BaseRepository<User> {
     @Inject(User.name)
     protected readonly jsonDBService: JsonDBService<User>,
   ) {
-    super();
+    super(User);
   }
 }

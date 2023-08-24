@@ -1,10 +1,11 @@
 import { BadRequestException } from '@nestjs/common';
 import { JsonDBService } from './database.service';
+import { ClassConstructor, plainToInstance } from 'class-transformer';
 
 export abstract class BaseRepository<T> {
   protected abstract readonly jsonDBService: JsonDBService<T>;
 
-  constructor() {}
+  constructor(private readonly classType: ClassConstructor<T>) {}
 
   abstract getPath(): string;
 
@@ -12,21 +13,40 @@ export abstract class BaseRepository<T> {
     return this.jsonDBService.jsonDB.getIndex(`/${this.getPath()}`, id);
   }
 
-  async findByIdOrThrow(id: string): Promise<T[]> {
+  async findByIdOrThrow(id: string): Promise<T> {
     const index = await this.getIndex(id);
     if (index < 0) throw new BadRequestException(`id: ${id} don't exist`);
 
-    return this.jsonDBService.jsonDB.getObject<T[]>(
+    const res = await this.jsonDBService.jsonDB.getObject<T>(
       `/${this.getPath()}[${index}]`,
     );
+    return plainToInstance(this.classType, res);
   }
 
-  async getAll(): Promise<T[]> {
+  // todo
+  // find
+  async find(): Promise<T[]> {
     return this.jsonDBService.jsonDB.getObject<T[]>('/');
   }
 
-  async create(data: T): Promise<void> {
-    await this.jsonDBService.jsonDB.push(`/${this.getPath()}[]`, data, true);
+  // todo
+  // update
+  async findByIdAndUpdate(id: string, item: T) {
+    const index = await this.getIndex(id);
+    if (index < 0) throw new BadRequestException(`id: ${id} don't exist`);
+
+    await this.jsonDBService.jsonDB.push(
+      `/${this.getPath()}[${index}]`,
+      item,
+      true,
+    );
+  }
+
+  // todo
+  // delete
+
+  async create(item: T): Promise<void> {
+    await this.jsonDBService.jsonDB.push(`/${this.getPath()}[]`, item, true);
   }
 
   async deleteAll(): Promise<void> {
