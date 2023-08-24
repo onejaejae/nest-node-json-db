@@ -39,7 +39,7 @@ export class ErrorInterceptor implements NestInterceptor {
 
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
     const logError = this.curryLogger(
-      `${context.getClass().name}.${context.getHandler().name}`,
+      `${context.getClass().name} - ${context.getHandler().name}`,
     );
 
     return next.handle().pipe(

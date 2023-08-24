@@ -2,11 +2,15 @@ import { ClassProvider, Global, Module } from '@nestjs/common';
 import { DatabaseModule } from './database/database.module';
 import { User } from 'src/api/user/entity/user.entity';
 import { Post } from 'src/api/post/entity/post.entity';
-import { APP_INTERCEPTOR } from '@nestjs/core';
+import { APP_FILTER, APP_INTERCEPTOR } from '@nestjs/core';
 import { ErrorInterceptor } from './interceptor/error.interceptor';
+import { NodeJsonDBExceptionFilter } from './filter/node-json-db.exception.filter';
 
 const interceptors: ClassProvider[] = [
   { provide: APP_INTERCEPTOR, useClass: ErrorInterceptor },
+];
+const filters: ClassProvider[] = [
+  { provide: APP_FILTER, useClass: NodeJsonDBExceptionFilter },
 ];
 
 @Global()
@@ -15,7 +19,7 @@ const interceptors: ClassProvider[] = [
     DatabaseModule.forRoot({ path: './data' }),
     DatabaseModule.forFeature([User, Post]),
   ],
-  providers: [...interceptors],
+  providers: [...interceptors, ...filters],
   exports: [],
 })
 export class CoreModule {}
