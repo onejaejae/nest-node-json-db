@@ -3,6 +3,7 @@ import { UserRepositoryKey } from 'src/core/constant/repository.key.constant';
 import { UserRepository } from '../user/repository/user.repository';
 import { SignUpDto } from './dto/signUp.dto';
 import { User } from '../user/entity/user.entity';
+import { Transactional } from 'src/core/decorator/transactional.decorator';
 
 @Injectable()
 export class AuthService {
@@ -10,6 +11,7 @@ export class AuthService {
     @Inject(UserRepositoryKey) private readonly userRepository: UserRepository,
   ) {}
 
+  @Transactional()
   async signUp(signUpDto: SignUpDto) {
     const { email } = signUpDto;
 
