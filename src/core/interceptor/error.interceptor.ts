@@ -11,6 +11,7 @@ import {
 import { DataError, DatabaseError } from 'node-json-db';
 import { Observable, of } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { NodeJsonDBException } from '../exception/node-json-db.exception';
 
 @Injectable()
 export class ErrorInterceptor implements NestInterceptor {
@@ -26,11 +27,12 @@ export class ErrorInterceptor implements NestInterceptor {
     const { callClass, callMethod } = returnObj;
     switch (err.constructor) {
       case DataError:
-        console.log('DataError');
-        break;
+        throw new NodeJsonDBException(callClass, callMethod, err);
 
       case DatabaseError:
-        console.log('DatabaseError');
+        throw new NodeJsonDBException(callClass, callMethod, err);
+
+      default:
         break;
     }
   }
