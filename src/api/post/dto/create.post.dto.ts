@@ -1,12 +1,16 @@
-import { BaseEntity } from 'src/core/database/base.entity';
+import { IsString } from 'class-validator';
 
-export class Post extends BaseEntity {
+export class CreatePostDto {
+  @IsString()
   authorId: string;
+
+  @IsString()
   title: string;
+
+  @IsString()
   content: string;
 
   constructor(authorId: string, title: string, content: string) {
-    super();
     this.authorId = authorId;
     this.title = title;
     this.content = content;

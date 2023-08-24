@@ -1,12 +1,12 @@
 {
     "users": [
         {
-            "id": "4a4758190b5b28fa8b3d259bb5cb3db6",
-            "createdAt": "2023-08-24T07:32:54.030Z",
-            "updatedAt": "2023-08-24T07:32:54.030Z",
+            "id": "4f81fbbe5db40a50b7d0ce15179a9544",
+            "createdAt": "2023-08-24T08:12:46.883Z",
+            "updatedAt": "2023-08-24T08:12:46.883Z",
             "deletedAt": null,
-            "email": "test55@email.com",
-            "password": "$2b$10$UdTqCaPBMwHD.wSfVQNvb.4OPzBKXIlQyoa2MhCtsyMmBJW7cksTy"
+            "email": "test66@email.com",
+            "password": "$2b$10$RNoSrJqEXBtmKgjfrqDdiONJ0XwhY6rKn0dU6Nfnd3yw76KueQXuW"
         }
     ]
 }

@@ -21,8 +21,10 @@ export class DatabaseModule {
   static forFeature(entities: Entity[]): DynamicModule {
     const providers = entities.map((value) => ({
       provide: value.name,
-      useFactory: (path: { path: string }) => {
-        return new JsonDBService<typeof value>(path, value);
+      useFactory: async (path: { path: string }) => {
+        const service = new JsonDBService<typeof value>(path, value);
+        await service.setUp();
+        return service;
       },
       inject: ['DB_PATH'],
     }));
