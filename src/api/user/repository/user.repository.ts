@@ -1,10 +1,10 @@
 import { BaseRepository } from 'src/core/database/base.repository';
 import { JoinWithPosts, User } from '../entity/user.entity';
-import { Inject } from '@nestjs/common';
+import { Inject, forwardRef } from '@nestjs/common';
 import { JsonDBService } from 'src/core/database/database.service';
-import { Post } from 'src/api/post/entity/post.entity';
-import { IGetUserResponse } from 'src/types/user/response/get.user.response';
 import { TransformPlainToInstance } from 'class-transformer';
+import { PostRepositoryKey } from 'src/core/constant/repository.key.constant';
+import { PostRepository } from 'src/api/post/repository/post.repository';
 
 export class UserRepository extends BaseRepository<User> {
   getPath(): string {
@@ -14,22 +14,18 @@ export class UserRepository extends BaseRepository<User> {
   constructor(
     @Inject(User.name)
     protected readonly jsonDBService: JsonDBService<User>,
-    @Inject(Post.name)
-    protected readonly postJsonDBService: JsonDBService<Post>,
+    @Inject(forwardRef(() => PostRepositoryKey))
+    protected readonly postRepository: PostRepository,
   ) {
     super(User);
   }
 
   private async findPostsByUserId(userId: string) {
-    const posts = await this.postJsonDBService.jsonDB.getObject<Post[]>(
-      `/${Post.name.toLowerCase().concat('s')}`,
-    );
-
-    return posts.filter((item) => item.authorId === userId);
+    return this.postRepository.find({ authorId: userId });
   }
 
   @TransformPlainToInstance(JoinWithPosts)
-  async joinWithPosts(userId: string): Promise<IGetUserResponse> {
+  async joinWithPosts(userId: string): Promise<JoinWithPosts> {
     const user = (await this.findByIdOrThrow(userId)) as any;
     const post = await this.findPostsByUserId(userId);
 

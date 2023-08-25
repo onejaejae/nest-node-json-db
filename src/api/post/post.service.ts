@@ -16,6 +16,10 @@ export class PostService {
     @Inject(UserRepositoryKey) private readonly userRepository: UserRepository,
   ) {}
 
+  async getPost(postId: string) {
+    return this.postRepository.joinWithUser(postId);
+  }
+
   @Transactional()
   async createPost(createPostDto: CreatePostDto) {
     const { authorId, title, content } = createPostDto;

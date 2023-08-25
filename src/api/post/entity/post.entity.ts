@@ -1,3 +1,5 @@
+import { Type } from 'class-transformer';
+import { User } from 'src/api/user/entity/user.entity';
 import { BaseEntity } from 'src/core/database/base.entity';
 
 export class Post extends BaseEntity {
@@ -11,4 +13,11 @@ export class Post extends BaseEntity {
     this.title = title;
     this.content = content;
   }
+}
+
+export class JoinWithUser extends Post {
+  @Type(() => User)
+  author: User;
+
+  test() {}
 }
