@@ -1,0 +1,44 @@
+{
+    "mocks": [
+        {
+            "id": "4e6f53da847883608688682eecec1e42",
+            "createdAt": "2023-08-25T04:48:16.762Z",
+            "updatedAt": "2023-08-25T04:48:16.762Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "47131eee9f1333c89878d064a519f12f",
+            "createdAt": "2023-08-25T04:50:28.880Z",
+            "updatedAt": "2023-08-25T04:50:28.880Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4b11adcf3b2e99498371540f74b9d5d9",
+            "createdAt": "2023-08-25T04:50:28.881Z",
+            "updatedAt": "2023-08-25T04:50:28.881Z",
+            "deletedAt": null,
+            "email": "updated",
+            "password": "updated"
+        },
+        {
+            "id": "48e84d672502ef418060000f36744319",
+            "createdAt": "2023-08-25T04:52:08.682Z",
+            "updatedAt": "2023-08-25T04:52:08.682Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4bc6d13c4d5ed8108d2394011b6cc8f7",
+            "createdAt": "2023-08-25T04:52:08.683Z",
+            "updatedAt": "2023-08-25T04:52:08.683Z",
+            "deletedAt": null,
+            "email": "updated",
+            "password": "updated"
+        }
+    ]
+}
