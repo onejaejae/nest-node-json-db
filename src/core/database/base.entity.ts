@@ -1,6 +1,7 @@
 import { uuid } from 'src/common/util/generate.uuid';
+import { IAbstractEntity, IBaseEntity } from 'src/types/common/entity.type';
 
-export abstract class AbstractEntity {
+export abstract class AbstractEntity implements IAbstractEntity {
   id: string;
 
   constructor() {
@@ -8,7 +9,7 @@ export abstract class AbstractEntity {
   }
 }
 
-export class BaseEntity extends AbstractEntity {
+export class BaseEntity extends AbstractEntity implements IBaseEntity {
   createdAt: Date;
   updatedAt: Date;
   deletedAt: Date | null;

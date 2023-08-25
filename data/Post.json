@@ -1,3 +1,31 @@
 {
-    "posts": []
+    "posts": [
+        {
+            "id": "483cfd8470268c0196fea38c89f21f7b",
+            "createdAt": "2023-08-25T03:19:39.978Z",
+            "updatedAt": "2023-08-25T03:19:39.978Z",
+            "deletedAt": null,
+            "authorId": "4f81fbbe5db40a50b7d0ce15179a9544",
+            "title": "test",
+            "content": "test"
+        },
+        {
+            "id": "44dfc5f1deac33cebbe562d0d1393052",
+            "createdAt": "2023-08-25T03:43:51.396Z",
+            "updatedAt": "2023-08-25T03:43:51.396Z",
+            "deletedAt": null,
+            "authorId": "4f81fbbe5db40a50b7d0ce15179a9544",
+            "title": "test222",
+            "content": "test222"
+        },
+        {
+            "id": "43a088c38d2b15eb809007fc29a1a599",
+            "createdAt": "2023-08-25T03:44:27.678Z",
+            "updatedAt": "2023-08-25T03:44:27.678Z",
+            "deletedAt": null,
+            "authorId": "418319727869f27489230c0975012f42",
+            "title": "test333",
+            "content": "test333"
+        }
+    ]
 }

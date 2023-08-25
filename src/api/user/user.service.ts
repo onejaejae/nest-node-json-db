@@ -8,5 +8,7 @@ export class UserService {
     @Inject(UserRepositoryKey) private readonly userRepository: UserRepository,
   ) {}
 
-  async test() {}
+  async findUserById(userId: string) {
+    return this.userRepository.joinWithPosts(userId);
+  }
 }
