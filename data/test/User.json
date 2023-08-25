@@ -1,0 +1,84 @@
+{
+    "users": [
+        {
+            "id": "4a693d43e150ec25a4ddabff00ee572f",
+            "createdAt": "2023-08-25T05:44:40.135Z",
+            "updatedAt": "2023-08-25T05:44:40.135Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "446c0ca0d3dc78b4ac9f7c248bc08711",
+            "createdAt": "2023-08-25T05:46:05.895Z",
+            "updatedAt": "2023-08-25T05:46:05.895Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "475e4c7d5e3395eabec9af9694bf71c6",
+            "createdAt": "2023-08-25T05:49:39.407Z",
+            "updatedAt": "2023-08-25T05:49:39.407Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "47413e04120d939581a4a73567221235",
+            "createdAt": "2023-08-25T05:49:39.409Z",
+            "updatedAt": "2023-08-25T05:49:39.409Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "446e4c45df2b124089ef89531b0ac401",
+            "createdAt": "2023-08-25T05:52:41.352Z",
+            "updatedAt": "2023-08-25T05:52:41.352Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "418d4d2cbc0a36698475d662968fde24",
+            "createdAt": "2023-08-25T05:52:41.356Z",
+            "updatedAt": "2023-08-25T05:52:41.356Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "412fdcf9977900249b1a66ad913a0018",
+            "createdAt": "2023-08-25T05:52:50.963Z",
+            "updatedAt": "2023-08-25T05:52:50.963Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4b7ba57ccb9bf3f2896f5972e92615d4",
+            "createdAt": "2023-08-25T05:52:50.967Z",
+            "updatedAt": "2023-08-25T05:52:50.967Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4d1527c76dbf9859a84325af4022de85",
+            "createdAt": "2023-08-25T05:52:54.586Z",
+            "updatedAt": "2023-08-25T05:52:54.586Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4df7cf45980496e6bb263aeb55455ef7",
+            "createdAt": "2023-08-25T05:52:54.590Z",
+            "updatedAt": "2023-08-25T05:52:54.590Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        }
+    ]
+}

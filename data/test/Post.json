@@ -1,0 +1,40 @@
+{
+    "posts": [
+        {
+            "id": "409f965bc9ba0666b0d2aa445ef19489",
+            "createdAt": "2023-08-25T05:49:39.410Z",
+            "updatedAt": "2023-08-25T05:49:39.410Z",
+            "deletedAt": null,
+            "authorId": "47413e04120d939581a4a73567221235",
+            "title": "test",
+            "content": "test"
+        },
+        {
+            "id": "407642e6b159aa3eb2c6a8693b4b384c",
+            "createdAt": "2023-08-25T05:52:41.357Z",
+            "updatedAt": "2023-08-25T05:52:41.357Z",
+            "deletedAt": null,
+            "authorId": "418d4d2cbc0a36698475d662968fde24",
+            "title": "test",
+            "content": "test"
+        },
+        {
+            "id": "46798980e9fd1e8d973a95301cb35a11",
+            "createdAt": "2023-08-25T05:52:50.967Z",
+            "updatedAt": "2023-08-25T05:52:50.967Z",
+            "deletedAt": null,
+            "authorId": "4b7ba57ccb9bf3f2896f5972e92615d4",
+            "title": "test",
+            "content": "test"
+        },
+        {
+            "id": "4016046f66c95de5b5b260ba0edabb25",
+            "createdAt": "2023-08-25T05:52:54.590Z",
+            "updatedAt": "2023-08-25T05:52:54.590Z",
+            "deletedAt": null,
+            "authorId": "4df7cf45980496e6bb263aeb55455ef7",
+            "title": "test",
+            "content": "test"
+        }
+    ]
+}
