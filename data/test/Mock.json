@@ -343,6 +343,54 @@
             "deletedAt": null,
             "email": "updated",
             "password": "updated"
+        },
+        {
+            "id": "434d640ba57f0e23a0583b76b0632893",
+            "createdAt": "2023-08-25T05:57:38.904Z",
+            "updatedAt": "2023-08-25T05:57:38.904Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4faa8d6da618c63c8fd28e76ff920b1f",
+            "createdAt": "2023-08-25T05:57:38.906Z",
+            "updatedAt": "2023-08-25T05:57:38.906Z",
+            "deletedAt": null,
+            "email": "updated",
+            "password": "updated"
+        },
+        {
+            "id": "4f262129d8ca5ed79743e0b96cb860aa",
+            "createdAt": "2023-08-25T06:05:42.868Z",
+            "updatedAt": "2023-08-25T06:05:42.868Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4fd8ba700b177c20be37d428d9ca241d",
+            "createdAt": "2023-08-25T06:05:42.870Z",
+            "updatedAt": "2023-08-25T06:05:42.870Z",
+            "deletedAt": null,
+            "email": "updated",
+            "password": "updated"
+        },
+        {
+            "id": "4b76ce85f492a151aaf855c14c07a255",
+            "createdAt": "2023-08-25T06:08:32.215Z",
+            "updatedAt": "2023-08-25T06:08:32.215Z",
+            "deletedAt": null,
+            "email": "test@email.com",
+            "password": "1234"
+        },
+        {
+            "id": "4a52c543d2b66672bdd032acfa4cfad9",
+            "createdAt": "2023-08-25T06:08:32.216Z",
+            "updatedAt": "2023-08-25T06:08:32.216Z",
+            "deletedAt": null,
+            "email": "updated",
+            "password": "updated"
         }
     ]
 }
